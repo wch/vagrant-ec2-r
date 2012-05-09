@@ -39,7 +39,6 @@ export EC2_HOME=~/.ec2
 export PATH=$PATH:$EC2_HOME/bin
 export EC2_PRIVATE_KEY=`echo $EC2_HOME/pk-*.pem`
 export EC2_CERT=`echo $EC2_HOME/cert-*.pem`
-export EC2_SSH_PRIVATE_KEY=`echo $EC2_HOME/*-keypair`
 export JAVA_HOME=`/usr/libexec/java_home`   # On Mac
 export JAVA_HOME=/usr/lib/jvm/default-java  # On Ubuntu linux
 ```
@@ -72,11 +71,16 @@ Find its IP address with:
 
     ec2-describe-instances --region us-west-1
 
-Provision it using the same recipes as the demo Vagrant machine machine by running:
+After the machine boots up, provision it using the same recipes as the demo Vagrant machine machine:
 
-    ./setup.sh <ip address> a_vagrant_machine/
+    ./setup.sh <ip address> a_vagrant_machine/ ~/.ec2/test-ec2-keypair
+
+It should print a lot of diagnostic info to the terminal. If it doesn't, wait a little while and try again.
 
 DONE!
+
+You can ssh into the machine:
+    ssh -i ~/.ec2/test-ec2-keypair ubuntu@<ip address>
 
 Don't forget to turn off your instances when you're finished:
 

@@ -2,11 +2,12 @@
 #This script uploads everything required for `chef-solo` to run
 set -e
 
-if test -z "$2"
+if test -z "$3"
 then
   echo "I need 
 1) IP address of a machine to provision
-2) Path to a Vagrant VM folder (a folder containing a Vagrantfile) that you want me to extract Chef recipes from"
+2) Path to a Vagrant VM folder (a folder containing a Vagrantfile) that you want me to extract Chef recipes from
+3) Path to a SSH private key for this machine"
   exit 1
 fi
 
@@ -29,6 +30,8 @@ fi
 USERNAME=ubuntu
 COOKBOOK_TARBALL=$2/cookbooks.tgz
 DNA=$2/dna.json
+
+EC2_SSH_PRIVATE_KEY=$3
 
 #make sure this matches the CHEF_FILE_CACHE_PATH in `bootstrap.sh`
 CHEF_FILE_CACHE_PATH=/tmp/cheftime
