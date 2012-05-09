@@ -28,5 +28,6 @@ if platform?("ubuntu") && node['platform_version'].to_f == 12.04
 end
 
 package "r-base-core" do
+  version "2.15.0-1precise0"
   action :install
 end
