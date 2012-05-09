@@ -15,9 +15,9 @@ Just use Vagrant as you normally would:
 
 Production (EC2)
 ================
-Start up a new EC2 instance (`ami-af7e2eea` is a US west coast Ubuntu 10.10 64-bit server)
+Start up a new EC2 instance (`ami-87712ac2` is a US west coast Ubuntu 12.04 64-bit server)
 
-    ec2-run-instances ami-af7e2eea                 \
+    ec2-run-instances ami-87712ac2                 \
       --instance-type t1.micro                     \
       --key yournamehere                           \
       --user-data-file bootstrap.sh
