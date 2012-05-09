@@ -72,7 +72,7 @@ On your local machine, you will need the following
 + [ec2-api-tools](http://packages.ubuntu.com/maverick/ec2-api-tools) Ubuntu multiverse package (this is not currently in Debian's apt repositories; you'll need to download the Ubuntu `.deb` package  and use `dpkg --install`)
 + [VirtualBox 4](http://www.virtualbox.org/wiki/Downloads)
 + [Vagrant](http://vagrantup.com) rubygem; `gem install vagrant`
-+ The `lucid32` Vagrant base box; `vagrant box add lucid32 http://files.vagrantup.com/lucid32.box`.
++ The `precise64` Vagrant base box; `vagrant box add precise64 http://files.vagrantup.com/precise64.box`.
   Take a look at the [vagrant-ubuntu](https://github.com/lynaghk/vagrant-ubuntu) repository for scripts to make custom Ubuntu-based Vagrant base boxes.
 
 Add to your .bashrc

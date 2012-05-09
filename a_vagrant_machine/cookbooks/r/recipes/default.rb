@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: git
+# Cookbook Name:: r
 # Recipe:: default
 #
 # Copyright 2008-2009, Opscode, Inc.
