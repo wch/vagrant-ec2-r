@@ -1,4 +1,4 @@
-Vagrant-EC2
+Vagrant-EC2-R
 =============
 This repository shows how to use the same `chef-solo`-based provisioning scheme for Vagrant virtual machines and Amazon's EC2. This is useful because you'll be able to test the deployment procedures as you develop within a clean Vagrant machine. Running continuous deployment locally also saves tons of partial instance-hours, which can run into the hundreds of cents (I'm not made of money, people).
 
@@ -80,4 +80,4 @@ Add to your .bashrc
 
 Thanks
 ======
-This project is sponsored by [Keming Labs](http://keminglabs.com), a technical design studio specializing in data visualization.
+This project is based on [vagrant-ec2](https://github.com/lynaghk/vagrant-ec2/) from Keming labs.
