@@ -6,7 +6,13 @@ These scripts have been tested only on Ubuntu Linux.
 
 Development (local)
 ===================
-Just use Vagrant as you normally would:
+
+Before you run this the first time, you will have to add the Ubuntu 12.04 base image. This will download it and store it in Vagrant's local storage (`~/.vagrant.d/boxes/`), with the name `precise64`:
+
+    # Only need to run this once
+    vagrant box add precise64 http://files.vagrantup.com/precise64.box
+
+Then use Vagrant as you normally would:
 
     cd a_vagrant_machine/
     vagrant up
