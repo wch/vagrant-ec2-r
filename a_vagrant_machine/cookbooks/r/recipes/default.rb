@@ -17,12 +17,12 @@
 # limitations under the License.
 
 if platform?("ubuntu") && node['platform_version'].to_f == 12.04
-  apt_repository "precise-marutter-ppa" do
-    uri "http://ppa.launchpad.net/marutter/rrutter/ubuntu"
-    distribution "precise"
-    components ["main"]
+  apt_repository "precise-CRAN-iastate" do
+    uri "http://streaming.stat.iastate.edu/CRAN/bin/linux/ubuntu"
+    distribution "precise/"
+    # components ["main"]
     keyserver "keyserver.ubuntu.com"
-    key "B04C661B"
+    key "E084DAB9"
     action :add
   end
 end

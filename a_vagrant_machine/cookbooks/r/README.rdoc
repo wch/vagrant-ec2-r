@@ -10,11 +10,9 @@ Installs R.
 
 = USAGE:
 
-This cookbook primarily installs R packages from 
-https://launchpad.net/~marutter/+archive/rrutter/
+This cookbook primarily installs R packages from a CRAN repository.
 
   include_recipe "r"
-
 
 = LICENSE and AUTHOR:
       
