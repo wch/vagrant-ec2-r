@@ -21,6 +21,10 @@ After this is done, you can create the VM with Vagrant:
     vagrant up
     vagrant ssh
 
+To delete the virtual machine, run:
+
+    vagrant destroy
+
 
 # Production (EC2)
 
@@ -82,7 +86,7 @@ DONE!
 You can ssh into the machine:
     ssh -i ~/.ec2/test-ec2-keypair ubuntu@<ip address>
 
-Don't forget to turn off your instances when you're finished:
+This will terminate your instances when you're finished:
 
     ec2-terminate-instances --region us-west-1 <i-instance_id>
 
