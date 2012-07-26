@@ -67,9 +67,13 @@ After you do all these things, you will need to start a new terminal, or simply 
 
 Do the following each time you want to create a virtual machine on EC2.
 
-Start up a new EC2 instance (`ami-87712ac2` is a Ubuntu 12.04 64-bit server in region `us-west-1`):
+Go to the directory containing this project, then start up a new EC2 instance (`ami-87712ac2` is a Ubuntu 12.04 64-bit server in region `us-west-1`):
 
+    cd vagrant-ec2-r/
     ec2-run-instances ami-87712ac2 --region us-west-1 --instance-type t1.micro --key test-ec2-keypair --user-data-file bootstrap.sh
+
+NOTE: you may need to also set the security group with `--group <groupname>`.
+The default security group might not allow any connections to the machine; you will need to at the very least allow incoming ssh connections.
 
 Find its IP address with:
 
@@ -84,6 +88,7 @@ It should print a lot of diagnostic info to the terminal. If it doesn't, wait a 
 DONE!
 
 You can ssh into the machine:
+
     ssh -i ~/.ec2/test-ec2-keypair ubuntu@<ip address>
 
 This will terminate your instances when you're finished:
